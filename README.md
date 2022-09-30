@@ -8,12 +8,6 @@ You must enable the **Automatically add these trackers to new downloads** config
 ![prerequisite](https://i.ibb.co/jfjtzDc/image.png)  
 
 or add manually, if not already specified
-```
-[Preferences]
-...
-Bittorrent\TrackersList=     <- this line under preferences section
-...
-```
 
 ## Usage
 ```shell
