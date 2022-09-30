@@ -28,12 +28,8 @@ $ qb-tracker-updater --help
 
 ## Profiles
 1. best 
-2. best_ip [default]
-3. all 
-4. all_http 
-5. all_https
-6. all_ws
-7. all_ip
+2. all [default]
+3. http 
 
 ## Systemd integration
 

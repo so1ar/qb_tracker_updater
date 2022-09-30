@@ -18,18 +18,14 @@ func main() {
 	user := string(_user)
 
 	configPath := flag.String("conf", "/home/"+user[0:len(user)-1]+"/.config/qBittorrent/qBittorrent.conf", "qBittorrent config path")
-	profile := flag.Int("profile", 2, "select profile level:\n 1: best\n 2: best_ip\n 3: all_udp\n 4: all_http\n 5: all_https\n 6: all_ws\n 7: all_ip\n")
+	profile := flag.Int("profile", 2, "select profile level:\n 1: best\n 2: all\n 3: http\n")
 
 	flag.Parse()
 
 	profiles := [7]string{
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best_ip.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_udp.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_http.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_https.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ws.txt",
-		"https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt",
+		"https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/best.txt",
+		"https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/all.txt",
+		"https://cdn.staticaly.com/gh/XIU2/TrackersListCollection/master/http.txt",
 	}
 
 	res, err := http.Get(profiles[*profile-1])
