@@ -64,7 +64,7 @@ func main() {
 	buff := ""
 
 	for _, line := range strings.Split(string(content), "\n") {
-		if strings.Contains(line, "Bittorrent\\TrackersList") {
+		if strings.Contains(line, "Session\\AdditionalTrackers") {
 			config := strings.Split(line, "=")
 			config[1] = list
 			line = config[0] + "=" + config[1]
